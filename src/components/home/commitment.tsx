@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import environmentImg from '../../assets/environment.webp';
 import assuranceImg from '../../assets/assurance.webp';
+import innovationImg from '../../assets/innovation.webp';
 
 const sections = [
     {
@@ -27,7 +28,7 @@ const sections = [
     },
     {
         title: "INNOVATION",
-        image: null, // Renders as solid color dot
+        image: innovationImg,
         color: "#d9fb9b", // Light green matching bottom dot
         contentLeft: "Our R&D teams are constantly innovating to provide the next generation of chemical solutions. We focus on green chemistry and advanced material sciences to create sustainable alternatives.",
         contentRight: [

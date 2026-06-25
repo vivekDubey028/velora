@@ -376,8 +376,9 @@ export default function ProductDetail() {
 
               <div className="pdet-cta-img">
                 <img
-                  src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&auto=format&fit=crop&q=80"
-                  alt="Chemical laboratory"
+                  src="/images/cta_laboratory.webp"
+                  alt="Chemical laboratory formulation"
+                  loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block', opacity: 0.85 }}
                 />
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #0a2f5e 0%, transparent 35%)' }} />

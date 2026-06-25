@@ -34,13 +34,13 @@ function AppContent() {
 
       setIsAtTop(scrolled < 10);
 
-      const isProductDetail = location.pathname.startsWith('/products/') && location.pathname !== '/products';
-      const isWhiteBgPage = ['/about', '/logistics', '/sustainability', '/contact', '/export'].includes(location.pathname);
+      const darkHeroPages = ['/', '/about', '/products', '/logistics', '/sustainability'];
+      const hasDarkHero = darkHeroPages.includes(location.pathname);
 
-      if (isProductDetail || isWhiteBgPage || scrolled > vh * 0.25) {
-        setNavbarTheme('light');
-      } else {
+      if (hasDarkHero && scrolled <= vh * 0.25) {
         setNavbarTheme('dark');
+      } else {
+        setNavbarTheme('light');
       }
 
       const topThreshold = vh * 1.5;

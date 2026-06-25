@@ -1,4 +1,8 @@
 import { motion } from "framer-motion";
+import galleryIndustrial from "../../assets/gallery_industrial.webp";
+import galleryLab from "../../assets/gallery_lab.webp";
+import galleryProduct from "../../assets/gallery_product.webp";
+import gallerySustainability from "../../assets/gallery_sustainability.webp";
 
 const Gallery = () => {
   return (
@@ -16,6 +20,11 @@ const Gallery = () => {
         {/* Top Row */}
         <motion.div
           className="md:col-span-8 aspect-[2/1] md:aspect-auto bg-[#e5e5e5] rounded-[24px]"
+          style={{
+            backgroundImage: `url(${galleryIndustrial})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -23,6 +32,11 @@ const Gallery = () => {
         />
         <motion.div
           className="md:col-span-4 aspect-[1/1] bg-[#e5e5e5] rounded-[24px]"
+          style={{
+            backgroundImage: `url(${galleryLab})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -32,6 +46,11 @@ const Gallery = () => {
         {/* Bottom Row */}
         <motion.div
           className="md:col-span-4 aspect-[1/1] bg-[#e5e5e5] rounded-[24px]"
+          style={{
+            backgroundImage: `url(${galleryProduct})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -39,6 +58,11 @@ const Gallery = () => {
         />
         <motion.div
           className="md:col-span-8 aspect-[2/1] md:aspect-auto bg-[#e5e5e5] rounded-[24px]"
+          style={{
+            backgroundImage: `url(${gallerySustainability})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}

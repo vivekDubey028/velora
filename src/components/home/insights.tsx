@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import insightsGreenChemistry from "../../assets/insights_green_chemistry.webp";
+import insightsExport from "../../assets/insights_export.webp";
+import insightsCompliance from "../../assets/insights_compliance.webp";
 
 const insightsData = [
   {
@@ -6,21 +9,21 @@ const insightsData = [
     author: "Velora Research Team",
     title: "Green Chemistry: How Bio-Based Feedstocks Are Reshaping Industrial Supply Chains",
     description: "The global chemical industry is accelerating its shift to sustainable feedstocks. We explore what this means for manufacturers across Asia and Europe in 2025.",
-    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+    image: insightsGreenChemistry,
   },
   {
     date: "Mar 28, 2025",
     author: "Export Intelligence Desk",
     title: "India's Specialty Chemical Exports Cross $30 Billion: What It Means for Global Buyers",
     description: "India has emerged as the world's fastest-growing chemical export hub. Velora Chemicals is positioned at the heart of this growth, serving buyers in 30+ countries.",
-    image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=600&q=80",
+    image: insightsExport,
   },
   {
     date: "Feb 15, 2025",
     author: "Quality & Compliance Team",
     title: "EcoVadis Gold to ISO 9001: Inside Velora's Quality & Sustainability Certifications",
     description: "Achieving EcoVadis Gold places Velora in the top 5% of companies globally for ESG performance. Here's what our certification journey means for your supply chain.",
-    image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=600&q=80",
+    image: insightsCompliance,
   },
 ];
 
@@ -78,7 +81,7 @@ export default function Insights() {
               }}
             >
               <div style={{ aspectRatio: '4/3', width: '100%', overflow: 'hidden', background: '#f0f4f8', flexShrink: 0 }}>
-                <img src={insight.image} alt={insight.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <img src={insight.image} alt={insight.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div style={{ padding: '1rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{ fontWeight: 700, color: 'var(--brand)', fontSize: '0.875rem', lineHeight: 1.4, marginBottom: '0.5rem' }}>{insight.title}</h3>
@@ -115,6 +118,7 @@ export default function Insights() {
                 <img
                   src={insight.image}
                   alt={insight.title}
+                  loading="lazy"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.5s" }}
                 />
               </div>
